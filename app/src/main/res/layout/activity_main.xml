@@ -39,7 +39,7 @@
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
         android:gravity="end"
-        android:textColor="@color/black"
+        android:textColor="@color/lightGray"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@id/keypadTableLayout"
         app:layout_constraintEnd_toEndOf="parent"
@@ -65,6 +65,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="7dp"
                 android:background="@drawable/button_background"
+                android:onClick="clearButtonClicked"
                 android:stateListAnimator="@null"
                 android:text="C"
                 android:textSize="24sp" />
@@ -287,10 +288,12 @@
                 android:textSize="24sp" />
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/resultButton"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_margin="7dp"
                 android:background="@drawable/button_background_green"
+                android:onClick="resultButtonClicked"
                 android:stateListAnimator="@null"
                 android:text="="
                 android:textColor="@color/white"
