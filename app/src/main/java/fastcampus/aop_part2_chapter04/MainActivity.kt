@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableStringBuilder
 import android.text.style.ForegroundColorSpan
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.LinearLayout
@@ -181,7 +182,6 @@ class MainActivity : AppCompatActivity() {
                     val historyView = LayoutInflater.from(this).inflate(R.layout.history_row, null, false)
                     historyView.findViewById<TextView>(R.id.expressionTextView).text = it.expression
                     historyView.findViewById<TextView>(R.id.resultTextView).text = "= ${it.result}"
-
                     historyLinearLayout.addView(historyView)
                 }
             }
