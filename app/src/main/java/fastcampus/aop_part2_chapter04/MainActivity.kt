@@ -194,6 +194,18 @@ class MainActivity : AppCompatActivity() {
         isOperator = false
         hasOperator = false
     }
+
+    fun closeHistoryButtonClicked(v: View) {
+        historyLayout.isVisible = false
+    }
+
+    fun historyClearButtonClicked(v: View) {
+        historyLinearLayout.removeAllViews()
+
+        Thread(Runnable {
+            db.historyDao().deleteAll()
+        }).start()
+    }
 }
 
 fun String.isNumber(): Boolean {
